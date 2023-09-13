@@ -1,0 +1,75 @@
+
+
+create database GMT_DB;
+use GMT_DB;
+
+
+## Run the create table commands one by one to initialize your Database
+
+
+
+
+CREATE TABLE users (
+  id varchar(50) PRIMARY KEY ,
+  username VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  fName VARCHAR(255) NOT NULL,
+  lName VARCHAR(255),
+  contact VARCHAR(12) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE doctors (
+  id varchar(50) PRIMARY KEY ,
+  username VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  fName VARCHAR(255) NOT NULL,
+  lName VARCHAR(255),
+  contact VARCHAR(12) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  address VARCHAR(255) NOT NULL,
+  speciality varchar(255) NOT NULL,
+  hospital varchar(255) NOT NULL,
+  age INT NOT NULL,
+    city VARCHAR(255) NOT NULL,
+    experience INT NOT NULL,
+    rating FLOAT default(3),
+    imageUrl VARCHAR(255)
+    
+);
+CREATE TABLE appointments (
+  id varchar(50) PRIMARY KEY ,
+  D_id varchar(50) NOT NULL,
+  date_appointment date NOT NULL,
+  startTime time NOT NULL ,
+  endTime time NOT NULL ,
+  isBooked TINYINT DEFAULT(0),
+  CONSTRAINT unique_combination1 UNIQUE (date_appointment, startTime,D_id),
+  CONSTRAINT unique_combination2 UNIQUE (date_appointment, endTime,D_id),
+   FOREIGN KEY(D_id) REFERENCES doctors(id) 
+   ON UPDATE CASCADE
+   ON DELETE CASCADE
+  
+);
+
+CREATE TABLE booked_appointments(
+patient_id varchar(50) NOT NULL,
+appointment_id varchar(50) PRIMARY KEY,
+FOREIGN KEY(patient_id) REFERENCES users(id) 
+   ON UPDATE CASCADE
+   ON DELETE CASCADE,
+FOREIGN KEY(appointment_id) REFERENCES appointments(id) 
+   ON UPDATE CASCADE
+   ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
+
+
