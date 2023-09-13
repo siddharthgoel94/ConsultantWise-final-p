@@ -1,0 +1,31 @@
+
+.timePickerSelectList{
+   
+    width:33%;
+    margin-left:24%;
+    border-radius: 10px;
+    font-size: 18px;
+   
+}
+.timePickerSelectList selected{
+   
+  width:33%;
+  margin-left:24%;
+  border-radius: 10px;
+  font-size: 20px;
+ 
+}
+.timeSelectHeading{
+    /* text-align:center; */
+   
+    font-size: xx-large;
+    margin: 2rem;
+   
+}
+.timeHolder{
+  /* margin: auto; */
+  display: inline;
+  margin-left: 30%;
+
+}
+

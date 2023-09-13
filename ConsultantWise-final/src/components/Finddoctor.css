@@ -1,0 +1,13 @@
+.doctor-title{
+    font-size: 200%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    /* margin-bottom: 20px; */
+    margin-top: -30px;
+}
+
+li{
+    list-style-type: none;
+    margin-top: 10%;
+    margin-left: 15%;
+}

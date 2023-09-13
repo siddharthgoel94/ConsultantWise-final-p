@@ -1,0 +1,45 @@
+.picker {
+    grid-column: 5/10;
+    grid-row: 2/4;
+    /* // background: cornflowerblue; */
+  
+    padding-bottom: 50px;
+  
+  
+    
+  }
+  .dateHolder{
+    margin: auto;
+    display: inline;
+    margin-left: 4%;
+  }
+  input {
+    font-size: 40px;
+    /* margin: auto; */
+    /* margin-right: 10px; */
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    /* color: rgb(87, 191, 243); */
+    color:black;
+    /* color: $color-gray-one; */
+    text-align: center;
+    border: none;
+    background-image:linear-gradient(to left, #553c9a, #b393d3);
+    /* border: 2px solid white; */
+    border-radius: 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  input:hover{
+    cursor: pointer;
+  }
+  .dateSelectHeading{
+    /* text-align:center; */
+    /* display: inline-block; */
+    font-size: xx-large;
+    margin: 2rem;
+    /* color:#553c9a */
+  }
+ 
+ 
